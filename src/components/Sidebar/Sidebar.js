@@ -97,7 +97,7 @@ function Sidebar(props) {
                   <p className="ms-1">Dashboard</p>
                 </NavLink>
               </li>
-              {EmpList === true &&
+           
                 <li>
                   <NavLink
                     to="/tables"
@@ -109,7 +109,7 @@ function Sidebar(props) {
                     <p>Pharma List</p>
                   </NavLink>
                 </li>
-              }
+           
               {EmpLeaves === true &&
                 <li>
                   <NavLink
