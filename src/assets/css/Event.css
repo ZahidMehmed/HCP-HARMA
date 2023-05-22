@@ -1,0 +1,9 @@
+
+  .search-icon{
+    font-size: 32px;
+    color:#51cbce;
+    cursor: pointer;
+  }
+  .search-input input{border: none; border-bottom: 1.4px solid #09898b; border-radius: 0px; cursor: pointer;}
+  .search-icon:hover{  font-size: 32px; color:#09898b }
+  .search-input input:hover{border: none; border-bottom: 1.4px solid #09898b; border-radius: 0px; cursor: pointer;}

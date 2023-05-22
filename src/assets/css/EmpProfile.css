@@ -1,0 +1,13 @@
+.empProfile h6{
+    font-size: 12px;
+}
+.text-info{
+    font-weight: 400;
+    font-size: 12px;
+}
+.btn-add{ background-color:  #03a05c;}
+.btn-add:hover{ background:  #03844c;}
+.head-title{
+color: #03844c; font-weight: 600;
+}
+

@@ -1,0 +1,29 @@
+.login{
+background-color: rgb(238, 238, 248);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
+}
+.login h2{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.login input{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
+}
+.page404 h2{
+color: rgb(207, 7, 7); 
+justify-content: center;
+align-items: center;
+padding-bottom: 0px;
+font-size: 44px;
+font-weight: bolder;
+margin-bottom: 0px;
+}
+.page404 h5{
+    color: rgb(207, 7, 7); 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    font-size: 22px;
+    font-weight: bolder;
+    }

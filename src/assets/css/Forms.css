@@ -1,0 +1,21 @@
+
+/* .EmpForm{
+    background-color:aqua
+} */
+.EmpForm label{
+   
+    font-size: 12px;
+    font-weight: bold;
+}
+.EmpForm  input{
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+ }
+ .EmpDetailForm {
+    background-color: rgb(238, 238, 248);
+ }
+ .CheckInput{
+    margin-left: 20px;
+ }
+ .Con{
+    color: #03844c; 
+ }

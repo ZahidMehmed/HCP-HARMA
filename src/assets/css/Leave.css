@@ -1,0 +1,9 @@
+.Leave{
+    font-family:sans-serif
+}
+.Leave p {
+    margin-top: 1px;
+    margin-left: 15px;
+    color: rgb(58, 180, 240);
+    font-size: 14px;
+}

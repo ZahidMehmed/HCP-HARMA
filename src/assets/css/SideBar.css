@@ -1,0 +1,23 @@
+.bg-nav{
+background-color: #e7efec;
+}
+.logo-normal{
+    color: #03a05c;
+    font-weight: 700;
+    text-decoration: none;
+}
+.logo-normal:hover{ text-decoration: none; color: #038e52;}
+.nav-link p{ color: #03a05c;
+    font-weight: 700;
+}
+.icon{
+    color: #03a05c;
+}
+i{    color: #03a05c;}
+span{color: #03a05c;}
+.DropdownItem{
+    color: #03a05c;
+}
+.drop-down{
+    color: #03a05c;
+}
