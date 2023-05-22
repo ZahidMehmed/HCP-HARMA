@@ -31,7 +31,7 @@ const Consultants = () => {
   const [DeletePermission, setDeletePermission] = useState(true)
   const Navigate = useNavigate();
   const handleOnGet = async () => {
-    let result = await fetch(`http://localhost:350/ConAllget`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/ConAllget`)
     result = await result.json()
     console.log(result)
     setConsultant(result)
@@ -42,7 +42,7 @@ const Consultants = () => {
 
   const deleteData = async (id) => {
     setIsModalOpen(false);
-    let result = await fetch(`http://localhost:350/DeleteConsultant/${id}`, {
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/DeleteConsultant/${id}`, {
       method: "delete"
     }
     )
@@ -76,7 +76,7 @@ const Consultants = () => {
 
 
   const getAPIbyID = async (item) => {
-    let result = await fetch(`http://localhost:350/AdminPermisionsId/${id}`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/AdminPermisionsId/${id}`)
     result = await result.json()
     console.log(result)
     setAddPermission(result.Add)
@@ -214,7 +214,7 @@ const Consultants = () => {
                         <Col className="flex-column justify-content-center align-items-center" lg="8" md="6">
                           <Card className="d-flex align-items-center justify-content-center card-user">
                           {/* <Image width={500} /> */}
-                            <Image alt="..." style={{width:"100%"}}  className="avatar border-gray" src={`http://localhost:350/uploads/${selectedConsultant.ConPhoto}`} />
+                            <Image alt="..." style={{width:"100%"}}  className="avatar border-gray" src={`https://hc-pharma-back-end.vercel.app/uploads/${selectedConsultant.ConPhoto}`} />
                           </Card>
                           <Nav aria-label="breadcrumb" className="main-breadcrumb d-flex justify-content-center">
                             <h5 className="breadcrumb-item text-center mt-0" aria-current="page">

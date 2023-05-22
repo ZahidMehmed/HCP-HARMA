@@ -49,7 +49,7 @@ function Dashboard(props) {
   
 
   const getAdminRequest = async () => {
-    let result = await fetch(`http://localhost:350/AdminPermisionsId/${id}`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/AdminPermisionsId/${id}`)
     result = await result.json()
     setEmpList(result.EmpList)
     setEmpLeaves(result.EmpLeaves)
@@ -58,7 +58,7 @@ function Dashboard(props) {
   }
   const getSuperAdminRequest = async () => {
     try {
-      let result = await fetch(`http://localhost:350/userGetId/${id}`);
+      let result = await fetch(`https://hc-pharma-back-end.vercel.app/userGetId/${id}`);
       result = await result.json();
     setEmpList(result.EmpList)
     setEmpLeaves(result.EmpLeaves)

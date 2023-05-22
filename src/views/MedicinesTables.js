@@ -32,7 +32,7 @@ const MedicinesTable = () => {
   const [DeletePermission, setDeletePermission] = useState(true)
   const Navigate = useNavigate();
   const handleOnGet = async () => {
-    let result = await fetch(`http://localhost:350/EmployeeList_Get`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/EmployeeList_Get`)
     result = await result.json()
     console.log(result)
     setcategory(result)
@@ -43,7 +43,7 @@ const MedicinesTable = () => {
 
   const deleteData = async (id) => {
     setIsModalOpen(false);
-    let result = await fetch(`http://localhost:350/EmployeeList_Delete/${id}`, {
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/EmployeeList_Delete/${id}`, {
       method: "delete"
     }
     )
@@ -77,7 +77,7 @@ const MedicinesTable = () => {
 
 
   const getAPIbyID = async (item) => {
-    let result = await fetch(`http://localhost:350/AdminPermisionsId/${id}`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/AdminPermisionsId/${id}`)
     result = await result.json()
     console.log(result)
     setAddPermission(result.Add)
@@ -201,7 +201,7 @@ const MedicinesTable = () => {
                   <Container className="mt-5 empProfile">
                    <Row className="d-flex align-items-center">
                     <Col className="d-flex" sm={6} >
-                    <Image width={500} src={`http://localhost:350/uploads/${selectedMedicines.TabPhoto}`}/>
+                    <Image width={500} src={`https://hc-pharma-back-end.vercel.app/uploads/${selectedMedicines.TabPhoto}`}/>
                     </Col>
                     <Col sm={6}>                  
                       <h5>{selectedMedicines.brandName}<span style={{marginLeft:"4px"}}>{selectedMedicines.Strength}</span></h5> 

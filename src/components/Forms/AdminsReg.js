@@ -51,7 +51,7 @@ const AdminRegFrom = () => {
             setErr(errors);
             return;
         }
-        let result = await fetch(`http://localhost:350/AdminSignUp`, {
+        let result = await fetch(`https://hc-pharma-back-end.vercel.app/AdminSignUp`, {
             method: 'post',
             headers: {
                 'Content-Type': "Application/Json"

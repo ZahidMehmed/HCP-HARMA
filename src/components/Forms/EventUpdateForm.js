@@ -20,7 +20,7 @@ const EventUpdateForm = () => {
 
     const getApibyID = async (id) => {
 
-        let response = await fetch(`http://localhost:350/eventsUpdate/${params.id}`)
+        let response = await fetch(`https://hc-pharma-back-end.vercel.app/eventsUpdate/${params.id}`)
         response = await response.json()
         console.log(response.eventStartTime)
         setTitle(response.title)
@@ -47,7 +47,7 @@ const EventUpdateForm = () => {
         formData.append('eventEndTime', eventEndTime);
         formData.append('posterImage', posterImage);
 
-        let response = await fetch(`http://localhost:350/eventsUpdate/${params.id}`, {
+        let response = await fetch(`https://hc-pharma-back-end.vercel.app/eventsUpdate/${params.id}`, {
             method: 'put',
             body: formData,
         })

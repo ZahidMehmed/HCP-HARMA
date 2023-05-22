@@ -94,7 +94,7 @@ const ConsultantUpdate = () => {
         formData.append('Fri', Fri);
         formData.append('Sat', Sat);
         formData.append('Sun', Sun);
-        const response = await fetch(`http://localhost:350/UpdateConsultant/${params.id}`, {
+        const response = await fetch(`https://hc-pharma-back-end.vercel.app/UpdateConsultant/${params.id}`, {
             method: 'PUT',
             body: formData,
         });

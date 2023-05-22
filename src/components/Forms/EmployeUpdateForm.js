@@ -74,7 +74,7 @@ const EmoloyeesUpdateForm = () => {
     formData.append('DosageForm', DosageForm);
     formData.append('Discount', Discount);
     formData.append('Price', Price);
-    let response = await fetch(`http://localhost:350/EmployeeList_Updatedy_Id/${params.id}`, {
+    let response = await fetch(`https://hc-pharma-back-end.vercel.app/EmployeeList_Updatedy_Id/${params.id}`, {
       method: 'PUT',
       body: formData,
     })
@@ -87,7 +87,7 @@ const EmoloyeesUpdateForm = () => {
   }
    const getAPIbyID =async ()=>{
     console.log(params.id)
-    let result = await fetch(`http://localhost:350/EmployeeListById/${params.id}`)
+    let result = await fetch(`https://hc-pharma-back-end.vercel.app/EmployeeListById/${params.id}`)
     result = await result.json()
     console.log(result)
     setBrandName(result.brandName)
