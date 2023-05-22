@@ -21,3 +21,17 @@ span{color: #03a05c;}
 .drop-down{
     color: #03a05c;
 }
+.sidebar:after{
+    background:non;
+    background: none;
+    z-index: 3;
+}
+
+.sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+    padding-bottom: 100px;
+}
