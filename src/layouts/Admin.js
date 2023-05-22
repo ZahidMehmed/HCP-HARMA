@@ -8,12 +8,13 @@ import routes from "routes";
 import LogIn from "components/Login/Login";
 import Private from "components/Login/Private";
 import MedicinesTable from "views/MedicinesTables";
-import EmployeeLeaves from "views/EmployeeLeaves";
 import Eventss  from 'views/Events'
 import Policyy from "views/Policy";
 import MultiUsers from "views/MultiUsers";
 import Consultants from "views/Consultant";
+import '../assets/css/AdminCSS.css'
 var ps;
+
 function Dashboard(props) {
   const [EmpList, setEmpList] = useState(false)
   const [EmpLeaves, setEmpLeaves] = useState(false)

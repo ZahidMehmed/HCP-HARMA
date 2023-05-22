@@ -157,7 +157,7 @@ function Dashboard() {
             </Link>
           </Col> */}
         </Row>
-        <Row>
+        {/* <Row>
           <Col md="12">
             <Card>
               <CardHeader>
@@ -165,12 +165,7 @@ function Dashboard() {
                 <p className="card-category">24 Hours performance</p>
               </CardHeader>
               <CardBody>
-                {/* <Line
-                  data={dashboard24HoursPerformanceChart.data}
-                  options={dashboard24HoursPerformanceChart.options}
-                  width={400}
-                  height={100}
-                /> */}
+              
               </CardBody>
               <CardFooter>
                 <hr />
@@ -180,7 +175,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
         
       </div>
 
