@@ -99,7 +99,6 @@ const ConsultantForm = () => {
         const response = await fetch('https://hc-pharma-back-end.vercel.app/addConsultant', {
             method: 'POST',
             body: formData,
-            mode: 'no-cors',
         });
 
         if (response.ok) {
