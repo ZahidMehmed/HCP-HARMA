@@ -94,11 +94,12 @@ const ConsultantForm = () => {
         formData.append('Thu', Thu);
         formData.append('Fri', Fri);
         formData.append('Sat', Sat);
-        formData.append('Sun', Sun);
+        formData.append('Sun', Sun );
 
         const response = await fetch('https://hc-pharma-back-end.vercel.app/addConsultant', {
             method: 'POST',
             body: formData,
+            mode: 'no-cors',
         });
 
         if (response.ok) {
