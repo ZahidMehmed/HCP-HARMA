@@ -263,7 +263,7 @@ const Consultants = () => {
                                   <h6 className="mb-0">Specialist For</h6>
                                 </Col>
                                 <Col sm="8" className="text-info">
-                                  {selectedConsultant.SpecialLis}
+                                  {selectedConsultant.SpecialList}
                                 </Col>
                               </Row>
                          
@@ -273,7 +273,7 @@ const Consultants = () => {
                                   <h6 className="mb-0">Qualifications</h6>
                                 </Col>
                                 <Col sm="8" className="text-info">
-                                  {selectedConsultant.Qualification}
+                                  {selectedConsultant.Qualifications}
                                 </Col>
                               </Row>
                       
@@ -283,7 +283,7 @@ const Consultants = () => {
                                   <h6 className="mb-0">Description</h6>
                                 </Col>
                                 <Col sm="8" className="text-info">
-                                  {selectedConsultant.salary}
+                                  {selectedConsultant.Qualifications}
                                 </Col>
                               </Row>
                          
@@ -296,7 +296,7 @@ const Consultants = () => {
                                   <h6 className="mb-0">Fees</h6>
                                 </Col>
                                 <Col sm="8" className="text-info">
-                                  {selectedConsultant.lastDegree}
+                                  {selectedConsultant.Fee}
                                 </Col>
                               </Row>
                         
