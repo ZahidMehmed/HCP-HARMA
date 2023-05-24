@@ -12,8 +12,8 @@ const EmoloyeesUpdateForm = () => {
   const [Ingredients, setIngredients] = useState(''); // State for the ingredients
   const [Description, setDescription] = useState(''); // State for the description
   const [DosageForm, setDosageForm] = useState(''); // State for the dosage form
-  const [Discount, setDiscount] = useState(0); // State for the discount
-  const [Price, setPrice] = useState(0); // State for the price
+  const [Discount, setDiscount] = useState(''); // State for the discount
+  const [Price, setPrice] = useState(''); // State for the price
 
   const [Err, setErr] = useState(false)
   const Navigate = useNavigate()
