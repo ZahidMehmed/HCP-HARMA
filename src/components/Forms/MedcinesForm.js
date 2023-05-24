@@ -10,8 +10,8 @@ const EmoloyeesForm = () => {
   const [Ingredients, setIngredients] = useState(''); // State for the ingredients
   const [Description, setDescription] = useState(''); // State for the description
   const [DosageForm, setDosageForm] = useState(''); // State for the dosage form
-  const [Discount, setDiscount] = useState(0); // State for the discount
-  const [Price, setPrice] = useState(0); // State for the price
+  const [Discount, setDiscount] = useState(''); // State for the discount
+  const [Price, setPrice] = useState(''); // State for the price
 
   const [Err, setErr] = useState(false)
   const Navigate = useNavigate()
@@ -77,7 +77,7 @@ const EmoloyeesForm = () => {
     // formData.append('TabPhoto', TabPhoto);
 
     try {
-      const response = await fetch('http://localhost:350/PharmaList', {
+      const response = await fetch('https://hc-pharma-back-end.vercel.app/PharmaList', {
         method: 'POST',
         body: formData,
       });

@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Modal, Image } from 'antd';
-import { FcViewDetails } from 'react-icons/fc';
 import '../assets/css/EmpProfile.css'
 import {
   Card,

@@ -103,7 +103,7 @@ const ConsultantForm = () => {
         const data = await response.json();
         if (data.ok) {
             Navigate("/Consultant");
-            console.log(data);
+          
         } else {
             
         }
