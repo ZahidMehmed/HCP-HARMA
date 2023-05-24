@@ -46,17 +46,25 @@ function Dashboard(props) {
   let value = localStorage.getItem('user')
   const authV = JSON.parse(value)
   let id = authV?.user?._id
- 
-  
-
   const getAdminRequest = async () => {
-    let result = await fetch(`https://hc-pharma-back-end.vercel.app/AdminPermisionsId/${id}`)
-    result = await result.json()
-    setEmpList(result.EmpList)
-    setEmpLeaves(result.EmpLeaves)
-    setEvents(result.Events)
-    setPolicy(result.Policy)
-  }
+    let response = await fetch(`https://hc-pharma-back-end.vercel.app/AdminPermisionsId/${id}`);
+    if (response.ok) {
+      try {
+        const result = await response.text();
+        if (result) {
+          const jsonData = JSON.parse(result);
+          setEmpList(jsonData.EmpList);
+          setEmpLeaves(jsonData.EmpLeaves);
+          setEvents(jsonData.Events);
+          setPolicy(jsonData.Policy);
+        }
+      } catch (error) {
+        console.error("Error parsing JSON:", error);
+      }
+    }
+  };
+  
+  
   const getSuperAdminRequest = async () => {
     try {
       let result = await fetch(`https://hc-pharma-back-end.vercel.app/userGetId/${id}`);

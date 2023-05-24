@@ -77,7 +77,7 @@ const EmoloyeesForm = () => {
     // formData.append('TabPhoto', TabPhoto);
 
     try {
-      const response = await fetch('https://hc-pharma-back-end.vercel.app/PharmaList', {
+      const response = await fetch('https://hc-pharma-back-end.vercel.app/PharmaList/post', {
         method: 'POST',
         body: formData,
       });
