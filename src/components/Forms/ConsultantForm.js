@@ -100,13 +100,12 @@ const ConsultantForm = () => {
             method: 'POST',
             body: formData,
         });
-
-        if (response.ok) {
-            const data = await response.json();
+        const data = await response.json();
+        if (data.ok) {
             Navigate("/Consultant");
             console.log(data);
         } else {
-            console.log('Error:', response.status);
+            
         }
     };
 
