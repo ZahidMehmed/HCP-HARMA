@@ -77,7 +77,7 @@ const ConsultantForm = () => {
         //   }
 
         const formData = new FormData();
-        formData.append('ConPhoto', ConPhoto);
+        formData.append('ConPhoto', ConPhoto);;
         formData.append('email', email);
         formData.append('ConName', ConName);
         formData.append('Password', Password);
@@ -100,8 +100,6 @@ const ConsultantForm = () => {
             method: 'POST',
             body: formData,
         });
-        console.log(response)
-
         if (response.ok) {
             const data = await response.json();
             Navigate("/Consultant");

@@ -73,7 +73,7 @@ const LogIn = () => {
             handleClick(event.preventDefault)
             handleClick1(event.preventDefault)
           }} className=" login p-5 form">
-            <h2 className="text-center text-info display-4">Admin Login</h2>
+            <h2 className="text-center text-info display-4 text-success">HC-PHARMA Admin Login</h2>
             {Err && (
               <UncontrolledAlert color={Err}>
                 {Err === 'danger' ? 'Invalid email or password!' : 'Login Successful!'}
@@ -103,7 +103,7 @@ const LogIn = () => {
                 }}
               />
             </FormGroup>
-            <Button color="primary">Login</Button>
+            <Button color="success">Login</Button>
           </Form>
         </Col>
       </Row>

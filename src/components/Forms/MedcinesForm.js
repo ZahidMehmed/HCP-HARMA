@@ -19,9 +19,9 @@ const EmoloyeesForm = () => {
   const validateForm = () => {
     const errors = {};
 
-    if (!TabPhoto) {
-      errors.TabPhoto = "Full name is required";
-    }
+    // if (!TabPhoto) {
+    //   errors.TabPhoto = "Full name is required";
+    // }
 
     if (!brandName) {
       errors.brandName = "Brand is required";
@@ -57,11 +57,11 @@ const EmoloyeesForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const errors = validateForm();
-    if (errors) {
-      setErr(errors);
-      return;
-    }
+    // const errors = validateForm();
+    // if (errors) {
+    //   setErr(errors);
+    //   return;
+    // }
 
     const formData = new FormData();
     formData.append('TabPhoto', TabPhoto);
@@ -72,15 +72,14 @@ const EmoloyeesForm = () => {
     formData.append('DosageForm', DosageForm);
     formData.append('Discount', Discount);
     formData.append('Price', Price);
-    // formData.append('TabPhoto', TabPhoto);
-    // formData.append('TabPhoto', TabPhoto);
-    // formData.append('TabPhoto', TabPhoto);
+   
+    
 
     try {
-      const response = await fetch('https://hc-pharma-back-end.vercel.app/PharmaList/post', {
+      const response = await fetch('http://localhost:350/PharmaList', {
         method: 'POST',
         body: formData,
-      });
+    });
 
       if (response.ok) {
         const data = await response.json();
@@ -99,14 +98,14 @@ const EmoloyeesForm = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setTabPhoto(file);
-  };
+};
   return (
     <>
       <Form onSubmit={handleSubmit} className='EmpForm'>
         <Row className='ms-2 mt-4'>
           <Col sm={5}>
             <FormGroup >
-              <Label for="exampleEmail" >Product Image</Label>
+              <Label for="exampleEmail" >Consultant Profile</Label>
               <Input type="file" name="TabPhoto" className="form-control" onChange={handleFileChange}
                 invalid={Err
                   && Err.TabPhoto ? true : false}
