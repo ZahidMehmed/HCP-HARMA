@@ -4,7 +4,7 @@ import '../../assets/css/Forms.css'
 import { Form, FormGroup, Label, Input, FormFeedback, Button, Row, Col } from 'reactstrap';
 import MedicineComp from 'components/FormComponents/MediCom';
 const EmoloyeesForm = () => {
-  const [TabPhoto, setTabPhoto] = useState(null); // State for the tablet photo
+  const [TabPhoto, setTabPhoto] = useState(''); // State for the tablet photo
   const [brandName, setBrandName] = useState(''); // State for the brand name
   const [Strength, setStrength] = useState(''); // State for the strength
   const [Ingredients, setIngredients] = useState(''); // State for the ingredients
@@ -72,14 +72,14 @@ const EmoloyeesForm = () => {
     formData.append('DosageForm', DosageForm);
     formData.append('Discount', Discount);
     formData.append('Price', Price);
-
-
+   
+    
 
     try {
       const response = await fetch('https://hc-pharma-back-end.vercel.app/PharmaList', {
         method: 'POST',
         body: formData,
-      });
+    });
 
       if (response.ok) {
         const data = await response.json();
@@ -98,7 +98,7 @@ const EmoloyeesForm = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setTabPhoto(file);
-  };
+};
   return (
     <>
       <Form onSubmit={handleSubmit} className='EmpForm'>
