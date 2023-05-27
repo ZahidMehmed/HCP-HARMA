@@ -110,7 +110,7 @@ const ConsultantForm = () => {
     };
 
     const handleFileChange = (event) => {
-        const file = event.target.files[0];
+        const file = event.target.file[0];
         setConPhoto(file);
     };
     return (
@@ -134,7 +134,7 @@ const ConsultantForm = () => {
                                         <Col sm={5}>
                                             <FormGroup >
                                                 <Label for="exampleEmail" >Consultant Profile</Label>
-                                                <Input type="file" name="ConPhoto" className="form-control" onChange={handleFileChange}
+                                                <Input type="file" name="image1" className="form-control" onChange={handleFileChange}
                                                     invalid={Err
                                                         && Err.ConPhoto ? true : false}
                                                 />

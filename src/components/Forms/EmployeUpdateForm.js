@@ -106,7 +106,7 @@ const EmoloyeesUpdateForm = () => {
  getAPIbyID()
  }, [])
  const handleFileChange = (event) => {
-  const file = event.target.files[0];
+  const file = event.target.file[0];
   setTabPhoto(file);
 };
   return (
@@ -116,7 +116,7 @@ const EmoloyeesUpdateForm = () => {
         <FormGroup >
           <Label for="exampleEmail" >
             Product Image</Label>
-          <Input type="file" name="TabPhoto"
+          <Input type="file" name="image"
            className="form-control"
             onChange={handleFileChange}
             invalid={Err

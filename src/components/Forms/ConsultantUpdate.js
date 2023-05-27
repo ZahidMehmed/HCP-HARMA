@@ -110,7 +110,7 @@ const ConsultantUpdate = () => {
 
     const getAPIbyID =async ()=>{
         console.log(params.id)
-        let result = await fetch(`http://localhost:350/FetchConsultantId/${params.id}`)
+        let result = await fetch(`https://hc-pharma-back-end.vercel.app/FetchConsultantId/${params.id}`)
         result = await result.json()
         console.log(result)
         setEmail(result.email)
@@ -140,7 +140,7 @@ const ConsultantUpdate = () => {
      getAPIbyID()
      }, [])
     const handleFileChange = (event) => {
-        const file = event.target.files[0];
+        const file = event.target.file[0];
         setConPhoto(file);
     };
     return (
@@ -164,7 +164,7 @@ const ConsultantUpdate = () => {
                                         <Col sm={5}>
                                             <FormGroup >
                                                 <Label for="exampleEmail" >Consultant Profile</Label>
-                                                <Input type="file" name="ConPhoto" className="form-control" onChange={handleFileChange}
+                                                <Input type="file" name="image1" className="form-control" onChange={handleFileChange}
                                                     invalid={Err
                                                         && Err.ConPhoto ? true : false}
                                                 />
