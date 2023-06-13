@@ -79,22 +79,22 @@ const ConsultantForm = () => {
         const formData = new FormData();
         formData.append('image1', ConPhoto);;
         formData.append('email', email);
-        // formData.append('ConName', ConName);
-        // formData.append('Password', Password);
-        // formData.append('Discription', Discription);
-        // formData.append('SpecialList', SpecialList);
-        // formData.append('StartTme', StartTme);
-        // formData.append('EndTime', EndTime);
-        // formData.append('Fee', Fee);
-        // formData.append('Discription', Discription);
-        // formData.append('Qualifications', Qualifications);
-        // formData.append('Mon', Mon);
-        // formData.append('Tue', Tue);
-        // formData.append('Wed', Wed);
-        // formData.append('Thu', Thu);
-        // formData.append('Fri', Fri);
-        // formData.append('Sat', Sat);
-        // formData.append('Sun', Sun );
+        formData.append('ConName', ConName);
+        formData.append('Password', Password);
+        formData.append('Discription', Discription);
+        formData.append('SpecialList', SpecialList);
+        formData.append('StartTme', StartTme);
+        formData.append('EndTime', EndTime);
+        formData.append('Fee', Fee);
+        formData.append('Discription', Discription);
+        formData.append('Qualifications', Qualifications);
+        formData.append('Mon', Mon);
+        formData.append('Tue', Tue);
+        formData.append('Wed', Wed);
+        formData.append('Thu', Thu);
+        formData.append('Fri', Fri);
+        formData.append('Sat', Sat);
+        formData.append('Sun', Sun );
 
         const response = await fetch('https://hc-pharma-back-end.vercel.app/addConsultant', {
             method: 'POST',
