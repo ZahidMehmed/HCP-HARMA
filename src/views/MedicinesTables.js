@@ -21,7 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faHistory, faTrash } from '@fortawesome/free-solid-svg-icons'
 const MedicinesTable = () => {
 
-  const [Employee, setcategory] = useState([])
+  const [Product, setProduct] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [selectedMedicines, setSelectedMedicines] = useState(null);
@@ -34,7 +34,7 @@ const MedicinesTable = () => {
     let result = await fetch(`https://hc-pharma-back-end.vercel.app/EmployeeList_Get`)
     result = await result.json()
     console.log(result)
-    setcategory(result)
+    setProduct(result)
   }
   useEffect(() => {
     handleOnGet()
@@ -128,9 +128,9 @@ const MedicinesTable = () => {
                     </thead>
                     <tbody>
                       {
-                        Array.isArray(Employee) && Employee.length > 0
+                        Array.isArray(Product) && Product.length > 0
                         &&
-                        Employee.map((item, index) => {
+                        Product.map((item, index) => {
 
                           return (
                             <tr key={index + 1} scope="row" >
@@ -193,7 +193,7 @@ const MedicinesTable = () => {
             <Modal open={isDetailsModalOpen} width={800}
               onCancel={handleCancelDetailsModal}>
               <ModalHeader
-              >Employee Details
+              >Product Details
               </ModalHeader>
               {selectedMedicines && (
                 <div>
