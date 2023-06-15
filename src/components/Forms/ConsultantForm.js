@@ -102,7 +102,7 @@ const ConsultantForm = () => {
         });
         if (response.ok) {
             const data = await response.json();
-            // Navigate("/Consultant");
+            Navigate("/Consultant");
             console.log(data)
            
         } else {
