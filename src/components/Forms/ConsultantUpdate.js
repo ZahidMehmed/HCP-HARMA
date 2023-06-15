@@ -12,9 +12,9 @@ const ConsultantUpdate = () => {
     const [email, setEmail] = useState(''); // State for the brand name
     const [ConName, setConName] = useState(''); // State for the strength
     const [Password, setPassword] = useState(''); // State for the ingredients
-    const [Discription, setDiscription] = useState(''); // State for the description
+    const [Description, setDiscription] = useState(''); // State for the description
     const [SpecialList, setSpecialist] = useState(''); // State for the dosage form
-    const [StartTme, setStartTime] = useState(''); // State for the discount
+    const [StartTime, setStartTime] = useState(''); // State for the discount
     const [EndTime, setEndTime] = useState(''); // State for the price
     const [Contact, setContact] = useState('')
     const [Qualifications, setQualifications] = useState('')
@@ -48,16 +48,16 @@ const ConsultantUpdate = () => {
         //     errors.Password = "Password is required";
         //   }
 
-        //   if (!Discription) {
-        //     errors.Discription = "Discription is required";
+        //   if (!Description) {
+        //     errors.Description = "Description is required";
         //   }
 
         //   if (!SpecialList) {
         //     errors.SpecialList = "Specialist feild is required";
         //   }
 
-        //   if (!StartTme) {
-        //     errors.StartTme = "Start Time is required";
+        //   if (!StartTime) {
+        //     errors.StartTime = "Start Time is required";
         //   }
 
         //   if (!EndTime) {
@@ -81,9 +81,9 @@ const ConsultantUpdate = () => {
         formData.append('email', email);
         formData.append('ConName', ConName);
         formData.append('Password', Password);
-        formData.append('Discription', Discription);
+        formData.append('Description', Description);
         formData.append('SpecialList', SpecialList);
-        formData.append('StartTme', StartTme);
+        formData.append('StartTime', StartTime);
         formData.append('EndTime', EndTime);
         formData.append('Fee', Fee);
         formData.append('Qualifications', Qualifications);
@@ -116,10 +116,10 @@ const ConsultantUpdate = () => {
         setEmail(result.email)
         setConName(result.ConName)
         // setPassword(result.Password)
-        setDiscription(result.Discription)
+        setDiscription(result.Description)
         setSpecialist(result.SpecialList)
         setEndTime(result.EndTime)
-        setStartTime(result.StartTme)
+        setStartTime(result.StartTime)
         setFee(result.Fee)
         setQualifications(result.Qualifications)
         setMon(result.Mon)
@@ -212,17 +212,17 @@ const ConsultantUpdate = () => {
                                         <Col sm={8}>
                                             <MedicineComp
                                                 type={`textarea`}
-                                                placeholder={`Discription`}
-                                                label={'Consultant Discription'}
-                                                value={Discription}
+                                                placeholder={`Description`}
+                                                label={'Consultant Description'}
+                                                value={Description}
                                                 onChangeEvent={(e) => {
                                                     setDiscription(e.target.value);
-                                                    if (Err && Err.Discription) {
-                                                        setErr({ ...Err, Discription: null });
+                                                    if (Err && Err.Description) {
+                                                        setErr({ ...Err, Description: null });
                                                     }
                                                 }}
-                                                invalid={Err && Err.Discription ? true : false}
-                                                errorMessage={Err && Err.Discription ? Err.Discription : null}
+                                                invalid={Err && Err.Description ? true : false}
+                                                errorMessage={Err && Err.Description ? Err.Description : null}
                                             />
                                         </Col>
                                     </Row>
@@ -249,15 +249,15 @@ const ConsultantUpdate = () => {
                                                 type={`time`}
                                                 placeholder={``}
                                                 label={'Available from'}
-                                                value={StartTme}
+                                                value={StartTime}
                                                 onChangeEvent={(e) => {
                                                     setStartTime(e.target.value);
-                                                    if (Err && Err.StartTme) {
-                                                        setErr({ ...Err, StartTme: null });
+                                                    if (Err && Err.StartTime) {
+                                                        setErr({ ...Err, StartTime: null });
                                                     }
                                                 }}
-                                                invalid={Err && Err.StartTme ? true : false}
-                                                errorMessage={Err && Err.StartTme ? Err.StartTme : null}
+                                                invalid={Err && Err.StartTime ? true : false}
+                                                errorMessage={Err && Err.StartTime ? Err.StartTime : null}
                                             />
                                         </Col>
                                         <Col sm={2}>
