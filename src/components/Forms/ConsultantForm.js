@@ -12,7 +12,7 @@ const ConsultantForm = () => {
     const [email, setEmail] = useState(''); // State for the brand name
     const [ConName, setConName] = useState(''); // State for the strength
     const [Password, setPassword] = useState(''); // State for the ingredients
-    const [Discription, setDiscription] = useState(''); // State for the description
+    const [Description, setDiscription] = useState(''); // State for the description
     const [SpecialList, setSpecialist] = useState(''); // State for the dosage form
     const [StartTime, setStartTime] = useState(''); // State for the discount
     const [EndTime, setEndTime] = useState(''); // State for the price
@@ -48,8 +48,8 @@ const ConsultantForm = () => {
         //     errors.Password = "Password is required";
         //   }
 
-        //   if (!Discription) {
-        //     errors.Discription = "Discription is required";
+        //   if (!Description) {
+        //     errors.Description = "Description is required";
         //   }
 
         //   if (!SpecialList) {
@@ -81,12 +81,11 @@ const ConsultantForm = () => {
         formData.append('email', email);
         formData.append('ConName', ConName);
         formData.append('Password', Password);
-        formData.append('Discription', Discription);
+        formData.append('Description', Description);
         formData.append('SpecialList', SpecialList);
         formData.append('StartTime', StartTime);
         formData.append('EndTime', EndTime);
         formData.append('Fee', Fee);
-        formData.append('Discription', Discription);
         formData.append('Qualifications', Qualifications);
         formData.append('Mon', Mon);
         formData.append('Tue', Tue);
@@ -183,17 +182,17 @@ const ConsultantForm = () => {
                                         <Col sm={8}>
                                             <MedicineComp
                                                 type={`textarea`}
-                                                placeholder={`Discription`}
-                                                label={'Consultant Discription'}
-                                                value={Discription}
+                                                placeholder={`Description`}
+                                                label={'Consultant Description'}
+                                                value={Description}
                                                 onChangeEvent={(e) => {
                                                     setDiscription(e.target.value);
-                                                    if (Err && Err.Discription) {
-                                                        setErr({ ...Err, Discription: null });
+                                                    if (Err && Err.Description) {
+                                                        setErr({ ...Err, Description: null });
                                                     }
                                                 }}
-                                                invalid={Err && Err.Discription ? true : false}
-                                                errorMessage={Err && Err.Discription ? Err.Discription : null}
+                                                invalid={Err && Err.Description ? true : false}
+                                                errorMessage={Err && Err.Description ? Err.Description : null}
                                             />
                                         </Col>
                                     </Row>
