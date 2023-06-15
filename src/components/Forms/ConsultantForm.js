@@ -14,7 +14,7 @@ const ConsultantForm = () => {
     const [Password, setPassword] = useState(''); // State for the ingredients
     const [Discription, setDiscription] = useState(''); // State for the description
     const [SpecialList, setSpecialist] = useState(''); // State for the dosage form
-    const [StartTme, setStartTime] = useState(''); // State for the discount
+    const [StartTime, setStartTime] = useState(''); // State for the discount
     const [EndTime, setEndTime] = useState(''); // State for the price
     const [Contact, setContact] = useState('')
     const [Qualifications, setQualifications] = useState('')
@@ -56,8 +56,8 @@ const ConsultantForm = () => {
         //     errors.SpecialList = "Specialist feild is required";
         //   }
 
-        //   if (!StartTme) {
-        //     errors.StartTme = "Start Time is required";
+        //   if (!StartTime) {
+        //     errors.StartTime = "Start Time is required";
         //   }
 
         //   if (!EndTime) {
@@ -83,7 +83,7 @@ const ConsultantForm = () => {
         formData.append('Password', Password);
         formData.append('Discription', Discription);
         formData.append('SpecialList', SpecialList);
-        formData.append('StartTme', StartTme);
+        formData.append('StartTime', StartTime);
         formData.append('EndTime', EndTime);
         formData.append('Fee', Fee);
         formData.append('Discription', Discription);
@@ -220,15 +220,15 @@ const ConsultantForm = () => {
                                                 type={`time`}
                                                 placeholder={``}
                                                 label={'Available from'}
-                                                value={StartTme}
+                                                value={StartTime}
                                                 onChangeEvent={(e) => {
                                                     setStartTime(e.target.value);
-                                                    if (Err && Err.StartTme) {
-                                                        setErr({ ...Err, StartTme: null });
+                                                    if (Err && Err.StartTime) {
+                                                        setErr({ ...Err, StartTime: null });
                                                     }
                                                 }}
-                                                invalid={Err && Err.StartTme ? true : false}
-                                                errorMessage={Err && Err.StartTme ? Err.StartTme : null}
+                                                invalid={Err && Err.StartTime ? true : false}
+                                                errorMessage={Err && Err.StartTime ? Err.StartTime : null}
                                             />
                                         </Col>
                                         <Col sm={2}>
