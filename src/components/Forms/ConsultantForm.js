@@ -70,11 +70,11 @@ const ConsultantForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-          const errors = validateForm();
-          if (errors) {
-            setErr(errors);
-            return;
-          }
+        //   const errors = validateForm();
+        //   if (errors) {
+        //     setErr(errors);
+        //     return;
+        //   }
 
         const formData = new FormData();
         formData.append('image1', ConPhoto);;
