@@ -283,7 +283,7 @@ const Consultants = () => {
                                   <h6 className="mb-0">Description</h6>
                                 </Col>
                                 <Col sm="8" className="text-info">
-                                  {selectedConsultant.Discription}
+                                  {selectedConsultant.Description}
                                 </Col>
                               </Row>
                          
