@@ -226,7 +226,7 @@ const EmoloyeesForm = () => {
             <MedicineComp
               type={`text`}
               placeholder={`Prodcut Price`}
-              label={'Dosage (type)'}
+              label={'Actual Price'}
               value={Price}
               onChangeEvent={(e) => {
                 setPrice(e.target.value);

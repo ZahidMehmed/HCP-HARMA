@@ -103,7 +103,7 @@ function Dashboard(props) {
        {!authering && (<Route path="/SignIn" element ={<LogIn/>} />) }
        {EmpList === true &&<Route path={"/tables"} element ={<MedicinesTable/>} /> }
        {EmpLeaves === true && <Route  path={"/Consultant"} element ={<Consultants />} /> }
-       {Events === true && <Route   path={"/events"} element ={<Eventss/>} /> }
+       {/* {Events === true && <Route   path={"/events"} element ={<Eventss/>} /> } */}
        {Policy === true && <Route   path={"/policy"} element ={<Policyy/>} /> }
        {Auter == "Autherized" && <Route   path={"/MultiUsers"} element ={<MultiUsers/>} /> }
         </Routes>

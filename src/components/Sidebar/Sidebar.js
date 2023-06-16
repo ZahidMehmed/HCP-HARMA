@@ -135,7 +135,7 @@ function Sidebar(props) {
                   </NavLink>
                 </li>
               }
-              {Events === true &&
+              {/* {Events === true &&
                 <li>
                   <NavLink
                     to="/events"
@@ -144,11 +144,11 @@ function Sidebar(props) {
                     <div className="d-flex align-items-center">
                       <FontAwesomeIcon icon={faUser}
                         style={{ fontSize: 30, marginRight: 10 }} className="icon" /></div>
-                    {/* <i className="nc-icon nc-tile-56" /> */}
+             
                     <p>Users</p>
                   </NavLink>
                 </li>
-              }
+              } */}
               {Policy === true &&
                 <li>
                   <NavLink
